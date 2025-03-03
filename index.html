@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Form</title>
+</head>
+<body>
+  <h1>Leave a Message</h1>
+  <form id="messageForm">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('messageForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var form = event.target;
+      var formData = new FormData(form);
+
+      fetch('AKfycbxkiJMBJpkv40dxjyJ95x1_6RGzOHTEaNgLOWAZE9i5QNC7b3dTw4e1B3h0teEDoajgSw', {
+        method: 'POST',
+        body: formData
+      }).then(response => response.text())
+        .then(data => alert(data))
+        .catch(error => console.error('Error:', error));
+    });
+  </script>
+</body>
+</html>
