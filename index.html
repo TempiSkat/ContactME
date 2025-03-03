@@ -23,21 +23,16 @@
       var form = event.target;
       var formData = new FormData(form);
 
-      fetch('https://script.google.com/macros/s/AKfycbxTNLgrTBfeJhXeJFKF_LwEOqv7Eoox5oMV72fQguBmPL_wcR-iWkP9CMjgB4Qi17U8zQ/exec', {
+      fetch('https://script.google.com/macros/s/AKfycbwCl9gqqUyROFRJThbgm9fLtH7biCFneyeo4fELsF9kW5GEEJaVDMTrV-qGnHke6BLf0w/exec', {
         method: 'POST',
         body: formData,
         headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
         }
-      }).then(response => {
-          console.log("Success:", response);
-        })
-        .catch(err => {
-          console.error("Error:", err);
-        });
+      }).then(response => response.json())
+        .then(data => alert("Success: " + data.status))
+        .catch(err => console.error("Error:", err));
     });
   </script>
 </body>
 </html>
-
-
