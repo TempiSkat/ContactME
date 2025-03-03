@@ -7,32 +7,7 @@
 </head>
 <body>
   <h1>Leave a Message</h1>
-  <form id="messageForm">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <br><br>
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
-    <br><br>
-    <button type="submit">Submit</button>
-  </form>
-
-  <script>
-    document.getElementById('messageForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      var form = event.target;
-      var formData = new FormData(form);
-
-      fetch('https://script.google.com/macros/s/AKfycbwCl9gqqUyROFRJThbgm9fLtH7biCFneyeo4fELsF9kW5GEEJaVDMTrV-qGnHke6BLf0w/exec', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-        }
-      }).then(response => response.json())
-        .then(data => alert("Success: " + data.status))
-        .catch(err => console.error("Error:", err));
-    });
-  </script>
+  <!-- Embed the Google Form here -->
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVftfpplpg3nLAYtSP1eGT8TeOY02z602qehvAcIoLtQ5gLA/viewform?embedded=true" width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </body>
 </html>
