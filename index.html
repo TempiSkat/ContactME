@@ -3,19 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Message Form</title>
+  <title>Contact Me</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: url('https://via.placeholder.com/1200x300?text=Car+Header') no-repeat center center/cover;
+      height: 300px;
+      text-align: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header h1 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .car-gallery {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
+    .car-gallery img {
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <h1>Leave a Message</h1>
-  <!-- Embed the Google Form here -->
- <form action="https://script.google.com/macros/s/AKfycbxW4hG6w0SPvANRvKdUmWR_erMWKoZTRLTr5obUuA4JqA4kP2c1OkPZB1_HJQfIDesQEQ/exec" method="POST">
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="message" rows="4" required></textarea><br><br>
-  <button type="submit">Send</button>
-</form>
+
+<header>
+  <h1>Contact Me</h1>
+</header>
+
+<div class="container">
+  <h2>Get in Touch</h2>
+  <form action="YOUR_GOOGLE_WEB_APP_URL" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+
+  <div class="car-gallery">
+    <img src="https://via.placeholder.com/300x200?text=Car+1" alt="Car 1">
+    <img src="https://via.placeholder.com/300x200?text=Car+2" alt="Car 2">
+    <img src="https://via.placeholder.com/300x200?text=Car+3" alt="Car 3">
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Your Name. All Rights Reserved.
+</footer>
+
 </body>
 </html>
